@@ -2,7 +2,6 @@ import pickle
 
 import numpy as np
 import pandas as pd
-import sklearn
 import streamlit as st
 
 # a44a3f f19c79 cbdfbd f6f4d2 d4e09b
@@ -141,7 +140,7 @@ def get_personality_description(openness, neuroticism, conscientiousness, agreea
     result = np.array([openness, neuroticism, conscientiousness, agreeableness, extraversion], ndmin=2)
     df1 = pd.DataFrame(result)
     testdf = df1[[0, 1, 2, 3, 4]]
-    maintestarray = testdf.values
+    maintestarray = testdf.valuesstrea
 
     # Load the model from the pickle file
     with open('multiNomialLogisticRegression.pkl', 'rb') as file:
